@@ -9,7 +9,7 @@
 
 particles = [];
 //Just like with Tracery, put anything you want in the ""s
-words = ["fall","drop","fly","break","rise","see","hear","move","shift"]
+words = ["fall","drop","fly","break","rise","see","hear","move","shift","rotate","wait"]
 
 // Game state: "title" or "playing"
 let gameState = "title";
