@@ -62,6 +62,17 @@ class Particle {
   }
 
   update() {
+    // Mouse repulsion - particles deflect away from cursor
+    let dx = this.x - mouseX;
+    let dy = this.y - mouseY;
+    let distance = sqrt(dx * dx + dy * dy);
+    let radius = 100;
+    if (distance < radius && distance > 0) {
+      let force = (radius - distance) / radius;
+      this.vx += (dx / distance) * force * 2;
+      this.vy += (dy / distance) * force * 2;
+    }
+
     this.x += this.vx;
     this.y += this.vy;
 		//Change this to +1 if you reverse the fade
